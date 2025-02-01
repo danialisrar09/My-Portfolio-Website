@@ -32,12 +32,10 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             {['home', 'about', 'contact', 'work', 'skills', 'testinomial'].map((item) => (
-              <li key={'${item}'}>
-                <div />
+              <li key={item}>
                 <a href={'#${item}'} onClick={() => setToggle(false)}>{item}</a>
               </li>
             ))}
-
           </motion.div>
         )}
       </div>
