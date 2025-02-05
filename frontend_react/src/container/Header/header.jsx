@@ -17,7 +17,8 @@ const scaleVariants = {
  
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div id="Home
+    " className="app__header app__flex">
 
       <motion.div
         whileInView={{ x:[ -100, 0], opacity: [0, 1] }}
@@ -28,7 +29,7 @@ const Header = () => {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
+              <p className="p-text">Hello, We are</p>
               <h1 className="head-text">Sprintek</h1>
             </div>
           </div> 
