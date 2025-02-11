@@ -7,25 +7,25 @@ import './About.scss';
 const abouts = [
   { 
     title:'Web Development',
-    description: 'I am a good developer',
+    description: 'We do Web Development',
     imgURL:images.about01
   },
   
   { 
-    title:'Web Design',
-    description: 'I am a good designer',
+    title:'Frontend Development',
+    description: 'We do Frontend Development',
     imgURL:images.about02
   },
   
   { 
-    title:'UI/UX',
-    description: 'I am a good UI/UX Designer',
+    title:'Backend Development',
+    description: 'We do Backend Development',
     imgURL:images.about03
   },
 
   { 
-    title:'Web Animation',
-    description: 'I am a good Web Animation',
+    title:'MERN Stack Development',
+    description: 'We do MERN Stack Development',
     imgURL:images.about04
   },
   
@@ -33,26 +33,19 @@ const abouts = [
 const About = () => {
   return (
     <>
-      <h2 className="head-text">
-        I know that
-        <span>Good Design</span>
-        <br />
-        means
-        <span>Good Business</span>
-      </h2>
-
-      <div className="app__profiles">
+      <h2 className="head-text">I know that<span> Good Apps</span><br />means<span> Good Business</span></h2>
+      <div className="app__profile">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type:"tween"}}
-            className='app__profile-item'
+            className="app__profile-item"
             key={about.title + index}
           >
             <img src={about.imgURL} alt={about.title} />
-            <h2 className='Bold-text' style={{ margin: 20 }}> {about.title} </h2>
-            <h2 className='p-text' style={{ margin: 10 }}> {about.description} </h2> 
+            <h2 className="Bold-text"> {about.title} </h2>
+            <h2 className="p-text"> {about.description} </h2> 
 
           </motion.div>
         ))}
