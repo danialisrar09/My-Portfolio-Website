@@ -23,11 +23,10 @@ export default createSchema({
     works, 
     testimonials,                                                     
     brands, 
-    abouts, 
+    abouts,  
     skills, 
     workExperience, 
     experiences, 
     contact
-    /* Your types here! */
   ]),
 })
