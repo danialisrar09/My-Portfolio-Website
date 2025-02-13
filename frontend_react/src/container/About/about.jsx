@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import './About.scss';
+import { urlFor, client } from '../../client';
  
 const abouts = [
   { 
@@ -31,6 +32,15 @@ const abouts = [
   
 ]
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() =>{
+    const query = '*[_type == "abouts"]'
+
+    client.fetch(query) 
+      .then((data) => setAbouts(data)) 
+  }, []);
+
   return (
     <>
       <h2 className="head-text">I know that<span> Good Apps</span><br />means<span> Good Business</span></h2>
